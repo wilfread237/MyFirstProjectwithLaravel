@@ -1,0 +1,207 @@
+/**requete pour le fichier ajout_responsable.php**/
+
+	.border{
+		height: 500px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+	}
+
+	.larger{
+		 width:500px;
+         padding: 10px;
+         border-radius: 5px;
+	}
+
+	.vert{
+		padding: 5px;
+		background-color: lightgreen;
+		width:60px;
+	}
+
+	.rouge{
+		padding: 5px;
+		background-color: silver;
+		width:60px;
+	}
+
+	.responsable{
+    background-image: url('../image_projet/os.jpg');
+
+	}
+
+
+/**fin de requete**/
+
+/**requete pour le fichier responsable.php***/
+	.title{
+		background-color: lightblue;
+		border-radius:2px;
+		border:solid 1.5px;
+		padding: 10px 10px;
+		width: 300px;
+		margin-left: 300px;
+		margin-top: 10px;
+	}
+
+	.link {
+		border-radius: 2px;
+		border:solid 1px;
+		height: 30px;
+		width:70px;
+		margin-left: 20px;
+	}
+
+	.link a{
+		text-decoration: none;
+		font-family: forte;
+	}
+
+	.rechercher{
+		width:995px;
+         padding: 10px;
+         border-radius: 5px;
+         margin-top:20px;
+
+	}
+
+	.table{
+		margin-top:40px;
+		
+	}
+
+	
+/**fin de requete**/
+
+/***requete pour le fichier modif_responsable.php**/
+	.touch{
+		height: 500px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+		margin-left: 360px;
+		margin-top: 30px;
+	}
+
+	.line{
+		width:500px;
+         padding: 10px;
+         border-radius: 5px;
+	}
+
+	.mod{
+		background-color: lightblue;
+		margin-left: 200px;
+		margin-top: 20px;
+		width: 60px;
+		padding: 5px;
+	}
+
+    .modi{
+    	background-color: silver;
+    }
+/**fin de requete***/
+
+/**requete pour le fichier ajout_client.php**/
+	.rel{
+		background-color: silver;
+	}
+
+	.borde{
+		height: 500px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+
+	}
+
+	.large{
+		 width:200px;
+         padding: 10px;
+         border-radius: 5px;
+	}
+
+	.forme{
+		font-family: forte;
+		margin-left:60px;
+	}
+
+	 .mismo{
+	 	display: inline-block;
+	 }
+
+	 .clt{
+	 		height: 330px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+		margin-left: 410px;
+	 }
+
+	 .bot{
+	 	margin-left: 140px;
+	 }
+
+	 .bar{
+	 	margin-left: 160px; 
+	 }
+/**fin de requete**/
+
+/**requete pour le fichier "modif_client.php"**/
+	.touche{
+		height: 560px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+		margin-left: 410px;	
+	}
+/**fin de requete**/
+
+/**requete pour le fichier "ajout_service.php"**/
+	.serv{
+		height: 400px;
+		width: 500px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+	}
+
+	.service{
+		background-image: url('../image_projet/a.jpg');
+	}
+/**fin de requete**/
+
+/**requete pour le fichier "ajout_produit"***/
+	.initials{
+		height: 500px;
+		width: 600px;
+		border-radius: 10px;
+		border:black solid 0.5px;
+	}
+
+	.view{
+		background-image: url('../image_projet/m.jpg');
+	}
+
+	.lien{
+		padding: 5px;
+		width:60px;
+	}
+/**fin de requete**/
+
+
+
+/**requete pour le fichier head.php**/
+.Interface{
+	background-image: url('../image_projet/InterfaceAcceuil.jfif');
+	 background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1400px 1500px;
+}
+
+.name{
+	font-family: forte;
+	color: blue;
+}
+
+/**fin de requete**/
+

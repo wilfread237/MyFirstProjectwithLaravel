@@ -1,0 +1,200 @@
+
+/***requete pour le formulaire d'insertion du client**/
+/*--copyright--*/
+
+.copy-wthree {
+    margin: 4em 0 2em;
+}
+
+.copy-wthree p {
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin: 0 3vw;
+}
+
+.copy-wthree p a {
+    color: black;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+
+.copy-wthree  a:hover {
+    color: lightblue;
+}
+
+/*--//copyright--*/
+
+.none{
+    display: none;
+}
+
+.initial{
+    padding:20px 20px;
+    height: 274px;
+    width: 350px;
+    border:solid 1.5px;
+    border-radius: 4px;
+}
+.container{
+    word-spacing: 10px;
+    
+
+}
+.line{
+    border-radius: 30px;
+    border:solid black 2px;
+}
+
+
+.views{
+    background-color: silver;
+}
+
+.bouton input:hover{
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid black 2px;
+    background-color: black;
+    color:lightblue;
+    transition: 0.5s all;
+    padding: 2px 3px;
+
+    /*margin-left: 60px;*/
+}
+
+.bouton{
+    margin-left: 190px;
+    margin-top: 1px;
+    padding:10px;
+
+}
+.point{
+    border-radius:5px;
+    width: 162px;
+    height: 19px;
+}
+
+#envoyer{
+    background-color: lightgreen;
+  
+}
+
+#annuler{
+    background-color:pink;
+}
+
+/***fin de requete**/
+
+
+/**requete pour le fichier 'ajout_article'**/
+
+  .larger{
+    width:500px;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+#ajouter{
+    background-color: lightblue;
+}
+
+#annuler{
+    background-color: lightpink;
+}
+
+.initials{
+    padding:20px 20px;
+    height: 370px;
+    width: 350px;
+    border:solid 1.5px;
+    border-radius: 4px;
+    margin-top:60px;
+    color: white;
+}
+
+.boutons{
+     margin-left: 190px;
+    margin-top: 10px;
+    padding:10px;
+}
+
+.boutons input:hover{
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid black 0.5px;
+    background-color: gray;
+    color: blue;
+    /*transition: 0.1s all;*/
+    padding: 2px 3px;
+    transform: scale(1.5);
+}
+
+.view{
+    background-image: url('../image_projet/m.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1400px 1000px;
+    
+    
+
+}
+/**fin de requete**/
+
+/**requete pour le fichier 'ajout_stock'***/
+    .begin{
+        width:20px;
+        height:210px;
+        margin-top:90px;
+    }
+
+
+    #annuler{
+        margin-top:1.5px;
+        background-color: lightpink;
+    }
+
+    .stock{
+     background-image: url('../image_projet/os.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1400px 1000px;
+
+    }
+/**fin de requete**/
+
+/***requete pour le fichier ajout_Dsc***/
+     .begins{
+         width:200px;
+        height:360px;
+        margin-top:90px;
+     }
+
+     .Dsc{
+     background-image: url('../image_projet/mac.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1400px 1000px;
+     }
+
+/**fin de requete**/
+
+/**requete pour le fichier 'ajout_Sc'**/
+.Sc{
+    background-image: url('../image_projet/alpha.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1400px 1000px;
+}
+
+.begine{
+     width:200px;
+     height:130px;
+     margin-top:90px;
+}
+/**finn de requete**/

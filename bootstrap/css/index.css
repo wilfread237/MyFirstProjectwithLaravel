@@ -1,0 +1,48 @@
+	
+body{
+	background-color:#343734;
+
+}
+	
+
+
+
+/*********** GESTION DU FORMULAIRE *************/
+
+.formulaire {
+	width: 40%;
+	min-width: 250px;
+	margin: 50px auto; 
+}
+
+.formulaire fieldset {
+	color:  white;
+}
+
+.formulaire fieldset legend {
+	font-size: 1.5em;
+	font-family: arial black;
+	color:  white;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="password"],
+.formulaire input[type="mail"],
+.formulaire input[type="phone"],
+.formulaire input[type="radio"] {
+	background: transparent;
+	color:white;
+}
+
+#fond {
+	background-color: black;
+}
+
+/*********** FIN GESTION DU FORMULAIRE *************/
+
+
+
+
+
+	
+
