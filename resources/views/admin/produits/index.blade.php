@@ -1,3 +1,8 @@
+    <?php
+                use App\Models\categorie;
+
+                $categorie = categorie::all();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +35,10 @@
     <div class="row" style="text-align:center;">
         <div class="col-md-6 col-md-offset-3" style="margin-top:50px;">
 
-<form action="in" method="POST">
+<form action="insertProduit" method="POST">
     <hr>
 
-            <h4>Formulaire d'enregistrement du démarcheur</h4>
+            <h4>Formulaire d'enregistrement du produit</h4>
     <hr>
 
     @if(Session::get('success'))
@@ -54,42 +59,55 @@
                    
      <div class="form-floating mb-3">
 
-            <input type="text" class="form-control" id="floatingInput" name="nom" placeholder="nom" value="{{ old('nom') }}">
-            <label for="floatingInput">Nom</label>
-            <span style="color:red;">@error('nom'){{ $message }} @enderror</span>
+            <input type="text" class="form-control" id="floatingInput" name="libelle" placeholder="libelle" value="{{ old('libelle') }}">
+            <label for="floatingInput">libelle</label>
+            <span style="color:red;">@error('libelle'){{ $message }} @enderror</span>
      </div>
 
     <div class="form-floating mb-3">
 
-            <input type="text" class="form-control" id="floatingInput" name="prenom" placeholder="prenom" value="{{ old('prenom') }}">
-            <label for="floatingInput">Prenom</label>
-            <span style="color:red;">@error('prenom'){{ $message }} @enderror</span>
+            <input type="text" class="form-control" id="floatingInput" name="description" placeholder="description" value="{{ old('description') }}">
+            <label for="floatingInput">description</label>
+            <span style="color:red;">@error('description'){{ $message }} @enderror</span>
     </div>
 
         
     <div class="form-floating mb-3">
 
-        <input type="email" class="form-control" name="email" id="floatingInput" pattern="^[A-Za-z]+@{1}gmail+\.{1}com$" placeholder="name@example.com" value="{{ old('email') }}">
-        <label for="floatingInput">Adresse Email</label>
-        <span style="color:red;">@error('email'){{ $message }} @enderror</span>
+        <input type="text" class="form-control" name="stock" id="floatingInput" placeholder="name@example.com" value="{{ old('stock') }}">
+        <label for="floatingInput">stock</label>
+        <span style="color:red;">@error('stock'){{ $message }} @enderror</span>
 
     </div>
 
 
     <div class="form-floating mb-3">
 
-         <input type="tel" class="form-control"  id="floatingInput" name="telephone" placeholder="Telephone" value="{{ old('telephone') }}" >
-         <label for="floatingInput">Telephone</label>
-         <span style="color:red;">@error('telephone'){{ $message }} @enderror</span>
+         <input type="file" class="form-control"  id="floatingInput" name="image" accept=".jpg, .jpeg, .jfif, .gif" placeholder="image" value="{{ old('image') }}" >
+         <label for="floatingInput">image</label>
+         <span style="color:red;">@error('image'){{ $message }} @enderror</span>
 
     </div>
 
 
     <div class="form-floating mb-3">
+        <select name="id_categorie" id="floatingInput"  class="form-control input-lg" value="{{ old('id_categorie') }}" required>
 
-        <input type="text" class="form-control" id="floatingInput" name="login" placeholder="Login" value="{{ old('login') }}">
-        <label for="floatingInput">Login</label>
-        <span style="color:red;">@error('login'){{ $message }} @enderror</span>
+
+											 @for ($i=0; $i< sizeof($categorie);$i++) {   
+
+											
+											<option value="<?php echo $categorie[$i]->id_categorie; ?>">
+
+												<?php   echo $categorie[$i]->libelle ?>
+
+											</option>
+
+											 }  
+                                             @endfor
+
+							</select>
+        <span style="color:red;">@error('id_categorie'){{ $message }} @enderror</span>
 
     </div>
 
@@ -97,9 +115,17 @@
 
     <div class="form-floating">
 
-       <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" value="{{ old('password') }}">
-       <label for="floatingPassword">Password</label>
-       <span style="color:red;">@error('password'){{ $message }} @enderror</span>
+       <input type="text" class="form-control" name="prix_vente" id="floatingInput" placeholder="prix de vente" value="{{ old('prix_vente') }}">
+       <label for="floatingInput">prix de vente</label>
+       <span style="color:red;">@error('prix_vente'){{ $message }} @enderror</span>
+
+    </div>
+
+    <div class="form-floating">
+
+       <input type="text" class="form-control" name="prix_achat" id="floatingInput" placeholder="prix d'achat" value="{{ old('prix_achat') }}">
+       <label for="floatingInput">prix d'achat</label>
+       <span style="color:red;">@error('prix_achat'){{ $message }} @enderror</span>
 
     </div>
 

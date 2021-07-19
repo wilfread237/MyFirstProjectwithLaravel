@@ -20,8 +20,8 @@ class CreateProduitsTable extends Migration
             $table->string('stock');
             $table->string('image');
             $table->foreignId('id_categorie')->constrained('categorie'); /*pour gerer les clés etrangère*/
-            $table->string('prix_vente');
-            $table->string('prix_achat');
+            $table->float('prix_vente');
+            $table->float('prix_achat');
             $table->string('statut');
             $table->timestamps();
         });

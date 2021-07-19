@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\produit;
+namespace App\Models\produit;
+
 use Illuminate\Database\Seeder;
 
-class categorieSeeder extends Seeder
+class ProduitTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +16,9 @@ class categorieSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $categorie = new categorie;
+        for ($i=0; $i <30 ; $i++) { 
+            
+                
+        }
     }
 }

@@ -18,7 +18,7 @@ class CreateDemarcheursTable extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email');
-            $table->float('telephone');
+            $table->integer('telephone');
             $table->string('login');
             $table->string('password');
             $table->string('statut');

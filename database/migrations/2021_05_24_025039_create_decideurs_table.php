@@ -14,10 +14,10 @@ class CreateDecideursTable extends Migration
     public function up()
     {
         Schema::create('decideurs', function (Blueprint $table) {
-            $table->increments('idd_decideur');
+            $table->increments('id_decideur');
             $table->string('nom');
             $table->string('prenom');
-            $table->float('telephone');
+            $table->integer('telephone');
             $table->string('email');
             $table->string('mode_paiement');
             $table->string('login');

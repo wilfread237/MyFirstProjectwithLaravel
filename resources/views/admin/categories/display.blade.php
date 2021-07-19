@@ -22,10 +22,12 @@ crossorigin="anonymous"></script>
     <title>Affichage</title>
 </head>
 <body>
-          <div style="margin-left:50px;">
+
+<div class="form-floating mb-6">
+
+<div style="margin-left:50px;">
           <button type="submit"  style="margin-left:20px; margin: top 10px;"><a href="/dashboard">back at the Dashboard</a></button>
           </div>
-<div class="form-floating mb-3">
 
 <input type="search" class="form-control" id="floatingInput" placeholder="Rechercher..." style="width:500px;
          padding: 10px;
@@ -58,28 +60,22 @@ crossorigin="anonymous"></script>
                 }
     </script>
 
-<label for="floatingInput" style="margin-left:180px;">Rechercher...</label>
+<label for="floatingInput" style="margin-left:180px; margin-top:70px;">Rechercher...</label>
 
 </div>
+<button type="submit"  style="margin-left:20px;" ><a href="/categories">back</a></button>
 
-<button type="submit"  style="margin-left:20px;" ><a href="/demarcheurs">back</a></button>
+<h1 style="text-align:center;">Tableau des catégories des produits</h1>
 
-                    <h1 style="text-align:center;">Tableau des Démarcheurs</h1>
-
-  <div class="col-md-12 col-md-offset-6 container" style="align:center; margin-top:25px;">
+  <div class="col-md-9 col-md-offset-6 container" style="align:center; margin-top:25px;">
   
 
         <table cellspacing="0.5" cellpadding="20" class="table table-dark table-borderless table-hover">
 
             <thead>
                   <tr>
-                    <th style="display:none;">ID_DEMARCHEUR</th>
-                    <th>NOM</th>
-                    <th>PRENOM</th>
-                    <th>EMAIL</th>
-                    <th>TELEPHONE</th>
-                    <th>LOGIN</th>
-                    <th>MOT DE PASSE</th>
+                    <th style="display:none;">ID_CATEGORIE</th>
+                    <th>LIBELLE</th>  
                     <th style="display:none;">STATUT</th>
                     <th>MODIFIER</th>
                     <th>SUPPRIMER</th>
@@ -89,29 +85,24 @@ crossorigin="anonymous"></script>
           
             <tbody>
             
-                  @foreach($demarcheur as $demarcheurs)
+                  @foreach($categorie as $categories)
 
                   <tr class="element">
 
-                  <td style="display:none;">{{ $demarcheurs->id_demarcheur}}</td>
-                  <td class="data" >{{$demarcheurs->nom}}</td>
-                  <td class="data">{{$demarcheurs->prenom}}</td>
-                  <td class="data">{{$demarcheurs->email}}</td>
-                  <td class="data">{{$demarcheurs->telephone}}</td>
-                  <td class="data">{{$demarcheurs->login}}</td>
-                  <td class="data">{{$demarcheurs->password}}</td>
-                  <td style="display:none;">{{$demarcheurs->statut}}</td>
+                  <td style="display:none;">{{ $categories->id_categorie}}</td>
+                  <td class="data" >{{$categories->libelle}}</td>
+                  <td style="display:none;">{{$categories->statut}}</td>
 
                   <td class="">
     
-                 <a href="/admin/demarcheurs/update/{{$demarcheurs->id_demarcheur}}"> <i class="fa fa-pencil-alt" style="margin-left:30px; color:lightgreen;"></i></a>
+                 <a href="" method="post"> <i class="fa fa-pencil-alt" style="margin-left:30px; color:lightgreen;"></i></a>
 
                   </td>
 
               <td  class="">
     
 
-                  <a href="/delete/{{$demarcheurs->id_demarcheur}}"><i class="fa fa-trash" style="margin-left:30px; color: red;"></i></a>
+                  <a href="/delete/{{$categories->id_categorie}}"><i class="fa fa-trash" style="margin-left:30px; color: red;"></i></a>
                   
               </td>
               

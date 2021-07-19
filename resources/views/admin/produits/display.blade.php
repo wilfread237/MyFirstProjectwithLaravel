@@ -1,3 +1,12 @@
+<?php
+                use App\Models\categorie;
+                use App\Models\produit;
+                use App\Http\Controller\Image;
+
+                $produits = produit::all();
+
+                $categories = categorie::all();
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +31,10 @@ crossorigin="anonymous"></script>
     <title>Affichage</title>
 </head>
 <body>
-          <div style="margin-left:50px;">
+
+<div style="margin-left:50px;">
           <button type="submit"  style="margin-left:20px; margin: top 10px;"><a href="/dashboard">back at the Dashboard</a></button>
-          </div>
+  </div>
 <div class="form-floating mb-3">
 
 <input type="search" class="form-control" id="floatingInput" placeholder="Rechercher..." style="width:500px;
@@ -60,11 +70,12 @@ crossorigin="anonymous"></script>
 
 <label for="floatingInput" style="margin-left:180px;">Rechercher...</label>
 
+                
+                   
+                <button type="submit"  style="margin-left:20px;" ><a href="/produits">back</a></button>
+
 </div>
-
-<button type="submit"  style="margin-left:20px;" ><a href="/demarcheurs">back</a></button>
-
-                    <h1 style="text-align:center;">Tableau des Démarcheurs</h1>
+                    <h1 style="text-align:center;">Tableau des Produits</h1>
 
   <div class="col-md-12 col-md-offset-6 container" style="align:center; margin-top:25px;">
   
@@ -73,13 +84,14 @@ crossorigin="anonymous"></script>
 
             <thead>
                   <tr>
-                    <th style="display:none;">ID_DEMARCHEUR</th>
-                    <th>NOM</th>
-                    <th>PRENOM</th>
-                    <th>EMAIL</th>
-                    <th>TELEPHONE</th>
-                    <th>LOGIN</th>
-                    <th>MOT DE PASSE</th>
+                    <th style="display:none;">ID_PRODUIT</th>
+                    <th>LIBELLE</th>
+                    <th>DESCRIPTION</th>
+                    <th>STOCK</th>
+                    <th>IMAGE</th>
+                    <th>ID DE LA CATEGORIE</th>
+                    <th>PRIX_VENTE</th>
+                    <th>PRIX_ACHAT</th>
                     <th style="display:none;">STATUT</th>
                     <th>MODIFIER</th>
                     <th>SUPPRIMER</th>
@@ -89,29 +101,31 @@ crossorigin="anonymous"></script>
           
             <tbody>
             
-                  @foreach($demarcheur as $demarcheurs)
+                  @foreach($produit as $produits)
 
                   <tr class="element">
 
-                  <td style="display:none;">{{ $demarcheurs->id_demarcheur}}</td>
-                  <td class="data" >{{$demarcheurs->nom}}</td>
-                  <td class="data">{{$demarcheurs->prenom}}</td>
-                  <td class="data">{{$demarcheurs->email}}</td>
-                  <td class="data">{{$demarcheurs->telephone}}</td>
-                  <td class="data">{{$demarcheurs->login}}</td>
-                  <td class="data">{{$demarcheurs->password}}</td>
-                  <td style="display:none;">{{$demarcheurs->statut}}</td>
+                  <td style="display:none;">{{ $produits->id_produit}}</td>
+                  <td class="data" >{{$produits->libelle}}</td>
+                  <td class="data">{{$produits->description}}</td>
+                  <td class="data">{{$produits->stock}}</td>
+                  <td class="data">{{$produits->image}}</td>
+                  <td class="data">{{$produits->id_categorie}}</td>
+                  <td class="data">{{$produits->prix_vente}}</td>
+                  <td class="data">{{$produits->prix_achat}}</td>
+                  <td style="display:none;">{{$produits->statut}}</td>
 
                   <td class="">
     
-                 <a href="/admin/demarcheurs/update/{{$demarcheurs->id_demarcheur}}"> <i class="fa fa-pencil-alt" style="margin-left:30px; color:lightgreen;"></i></a>
+                 <a href="/updateProduit/{{$produits->id_produit}}"> <i class="fa fa-pencil-alt" style="margin-left:30px; color:lightgreen;"></i></a>
 
                   </td>
+                
 
               <td  class="">
     
 
-                  <a href="/delete/{{$demarcheurs->id_demarcheur}}"><i class="fa fa-trash" style="margin-left:30px; color: red;"></i></a>
+                  <a href="/delete/{{$produits->id_produit}}"><i class="fa fa-trash" style="margin-left:30px; color: red;"></i></a>
                   
               </td>
               
